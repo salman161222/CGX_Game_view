@@ -1,0 +1,118 @@
+/* Center the box horizontally and vertically */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Style the box */
+.box {
+  position: relative; /* Add this line to establish a positioning context */
+  width: 70vw;
+  height: 70vh;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden; /* Add this line to hide any content that exceeds the box boundaries */
+}
+
+
+.camo-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover;
+  overflow: hidden; /* Add this line to hide any content that exceeds the circle boundaries */
+}
+
+
+/* Style the pagination container */
+.pagination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.pagination-count {
+  margin-bottom: 5px; /* Adjust the margin as needed */
+}
+
+/* Style the next button */
+.next-button {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.next-button:hover {
+  background-color: #ccc;
+}
+
+
+/* Style the loader */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.timer-container {
+  position: fixed;
+  bottom: 0;
+  right: 2%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  box-shadow: 4px 4px 10px #010100;   
+    
+
+}
+
+.timer {
+  display: inline-block;
+  padding: 10px;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #b1ede8, #a1c4fd, #c2e9fb, #c2e9fb);
+  border-radius: 5px;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
